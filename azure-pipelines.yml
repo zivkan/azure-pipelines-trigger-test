@@ -6,7 +6,9 @@ trigger:
     exclude:
       - release/dev-*
 
-job:
-  vmImage: ubuntu-latest
-  tasks:
+jobs:
+- job:
+  pool:
+    vmImage: ubuntu-latest
+  steps:
   - script: echo "Hello from $(Build.SourceBranch)"
