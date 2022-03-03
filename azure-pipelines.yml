@@ -1,0 +1,12 @@
+trigger:
+  branches:
+    include:
+    - dev
+    - release/release-*-MSRC
+    exclude:
+      - release/dev-*
+
+job:
+  vmImage: ubuntu-latest
+  tasks:
+  - script: echo "Hello from $(Build.SourceBranch)"
