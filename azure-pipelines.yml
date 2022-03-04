@@ -8,11 +8,11 @@ trigger:
       - release-*-msrc
 
 schedules:
-  - cron: "0 0 * * *"
-    displayName: "Daily Midnight build"
+  - cron: "0 0 * * 0"
+    displayName: "Sunday Midnight build"
     branches:
       include:
-      - release-1.0.x-MSRC
+      - release-2.0.x-MSRC
 
 jobs:
 - job:
