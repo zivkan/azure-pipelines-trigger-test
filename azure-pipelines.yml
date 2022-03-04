@@ -1,18 +1,18 @@
 trigger:
+  batch: false
   branches:
     include:
-    - dev
-    - release/release-*-MSRC
-    - release/release-1.0.x-MSRC
+      - dev   
     exclude:
-      - release/dev-*
+      - dev-*
+      - release-*-msrc
 
 schedules:
   - cron: "0 0 * * *"
     displayName: "Daily Midnight build"
     branches:
       include:
-      - release/release-1.0.x-MSRC
+      - release-1.0.x-MSRC
 
 jobs:
 - job:
