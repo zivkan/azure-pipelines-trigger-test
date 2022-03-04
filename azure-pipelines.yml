@@ -7,13 +7,6 @@ trigger:
       - dev-*
       - release-*-msrc
 
-schedules:
-  - cron: "0 0 * * *"
-    displayName: "Daily Midnight build"
-    branches:
-      include:
-      - release-2.0.x-MSRC
-
 jobs:
 - job:
   pool:
